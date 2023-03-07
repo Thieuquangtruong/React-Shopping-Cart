@@ -15,15 +15,21 @@ export default function BackToTopButton() {
 
   const scrollUp = () => {
     window.scrollTo({
-      top: 0,
+      top: 150,
       behavior: "smooth"
     })
   }
 
   return (
-    <div>
+    <div className="App">
         {backToTopButton && (
-        <button className='btn-backToTop' onClick={scrollUp}>^</button>)}
-    </div>
+        <button className='btn-backToTop' onClick={scrollUp} style={{
+          position: "fixed",
+          bottom:"50px",
+          right:"50px",
+          height:"50px",
+          fontSize:"20px"
+        }}>^</button>)}
+    </div> 
   )
 }

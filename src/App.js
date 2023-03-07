@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Cart from './pages/Cart';
 import {Routes, Route} from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import Footer from './components/Footer';
 
 
 
@@ -56,7 +57,8 @@ function App() {
         <Route path="/home" element={<Home products={products} handleAddToCart={handleAddToCart} />} />
         <Route path="/cart" element={<Cart listCart={listCart} handleRemoveCart={handleRemoveCart} />} />
 				<Route path="/admin" element={<ProductForm handleAddProduct={handleAddProduct}/>} />
-      </Routes>    
+      </Routes> 
+      <Footer />  
       
        <BackToTop></BackToTop>
     </div>
