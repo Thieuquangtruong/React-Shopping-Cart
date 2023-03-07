@@ -19,7 +19,7 @@ export default function Header({listCart}) {
         <Nav.Link><Link to="/home">Home</Link></Nav.Link>
           
           <Nav.Link><Link to="/cart">Cart &nbsp;</Link>
-            <Badge bg="secondary">{listCart.length}</Badge>
+            <Badge pill bg="success" ><span style={{fontSize: "15px"}}>{listCart.length}</span></Badge>
            
           </Nav.Link>
           <Nav.Link ><Link to="/admin">Admin</Link></Nav.Link>
