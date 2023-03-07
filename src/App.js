@@ -51,7 +51,7 @@ function App() {
 
   return ( 
     <div className="app">
-      <Header />
+      <Header listCart={listCart} />
       
       <Routes>
         <Route path="/home" element={<Home products={products} handleAddToCart={handleAddToCart} />} />

@@ -7,7 +7,7 @@ import {Link} from 'react-router-dom'
 
 
 
-export default function Header({size}) {
+export default function Header({listCart}) {
   return (
     <Navbar sticky="top" bg="dark" variant="dark">
       <Container>
@@ -19,7 +19,7 @@ export default function Header({size}) {
         <Nav.Link><Link to="/home">Home</Link></Nav.Link>
           
           <Nav.Link><Link to="/cart">Cart &nbsp;</Link>
-            <Badge bg="secondary">5</Badge>
+            <Badge bg="secondary">{listCart.length}</Badge>
            
           </Nav.Link>
           <Nav.Link ><Link to="/admin">Admin</Link></Nav.Link>
