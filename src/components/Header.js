@@ -4,7 +4,10 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Badge from "react-bootstrap/Badge";
 import {Link} from 'react-router-dom'
-export default function Header() {
+
+
+
+export default function Header({size}) {
   return (
     <Navbar sticky="top" bg="dark" variant="dark">
       <Container>
@@ -16,7 +19,8 @@ export default function Header() {
         <Nav.Link><Link to="/home">Home</Link></Nav.Link>
           
           <Nav.Link><Link to="/cart">Cart &nbsp;</Link>
-            <Badge bg="secondary">9</Badge>
+            <Badge bg="secondary">5</Badge>
+           
           </Nav.Link>
           <Nav.Link ><Link to="/admin">Admin</Link></Nav.Link>
         </Nav>
