@@ -2,12 +2,11 @@ import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import BackToTop from './components/BackToTop';
-import ProductForm from './components/ProductFrom';
 import Home from './pages/Home';
-import Cart from './pages/Cart';
+import Cart from './pages/Cart/Cart';
 import {Routes, Route} from 'react-router-dom';
 import { useEffect, useState } from 'react';
-
+import Admin from './pages/Manager/Admin';
 
 
 
@@ -17,13 +16,29 @@ function App() {
 
   //Get Data
   useEffect(() => {
-      fetch('https://63ac467634c46cd7ae7cce54.mockapi.io/api/mindx/products')
+      fetch('https://63f43bca864fb1d600246cf7.mockapi.io/api/v1/123')
       .then(res => res.json())
       .then(products => {
           console.log('result: ',products);
           setProducts(products);
       })
   },[])
+
+
+
+  const handleChange = (item, d) =>{
+		let ind = -1;
+		products.forEach((data, index)=>{
+			if (data.id === item.id)
+				ind = index;
+		});
+		const tempArr = products;
+		tempArr[ind].amount += d;
+		
+		if (tempArr[ind].amount === 0)
+			tempArr[ind].amount = 1;
+		setProducts([...tempArr])
+	}
 
   const handleAddToCart = (product) => {
       setListCart(prev => [...prev, product])
@@ -36,11 +51,13 @@ function App() {
   }
 
  const handleAddProduct = (data) => {
+
    const tempProduct = {
      id: products.length,
      productImg: data.type === 'MEN' ? './images/thunNam.jpeg' : './images/nuTayNgan.jpeg',
      productTitle: data.productTitle,
      productPrice: data.productPrice,
+     amount: data.amount,
      type: data.type,
    }
 
@@ -52,11 +69,11 @@ function App() {
   return ( 
     <div className="app">
       <Header listCart={listCart} />
-      
+
       <Routes>
-        <Route path="/home" element={<Home products={products} handleAddToCart={handleAddToCart} />} />
-        <Route path="/cart" element={<Cart listCart={listCart} handleRemoveCart={handleRemoveCart} />} />
-				<Route path="/admin" element={<ProductForm handleAddProduct={handleAddProduct}/>} />
+        <Route path="*" element={<Home products={products} handleAddToCart={handleAddToCart} />} />
+        <Route path="/cart" element={<Cart handleChange={handleChange} listCart={listCart} products={products}  handleRemoveCart={handleRemoveCart} />} />
+				<Route path="/admin" element={<Admin products={products}  handleAddProduct={handleAddProduct}/>} />
       </Routes>    
       <Footer />
        <BackToTop></BackToTop>

@@ -1,4 +1,4 @@
-import useInput from '../hooks/useInput';
+import useInput from '../../../hooks/useInput';
 
 function ProductForm({ handleAddProduct }) {
 
@@ -10,14 +10,12 @@ function ProductForm({ handleAddProduct }) {
             productPrice: inputPrice.value,
             type: inputType.value,
         }
-
         handleAddProduct(data);
     }
 
     const inputTitle = useInput();
     const inputPrice = useInput();
     const inputType = useInput();
-    
     return ( 
         <>
             <form onSubmit={handleSubmit}>
