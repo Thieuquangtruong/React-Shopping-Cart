@@ -9,6 +9,7 @@ function ProductForm({ handleAddProduct }) {
             productTitle: inputTitle.value,
             productPrice: inputPrice.value,
             type: inputType.value,
+            amount: 1,
         }
         handleAddProduct(data);
     }
@@ -16,6 +17,7 @@ function ProductForm({ handleAddProduct }) {
     const inputTitle = useInput();
     const inputPrice = useInput();
     const inputType = useInput();
+   
     return ( 
         <>
             <form onSubmit={handleSubmit}>
