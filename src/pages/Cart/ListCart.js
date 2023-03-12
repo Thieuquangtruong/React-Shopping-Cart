@@ -1,9 +1,10 @@
 import React,{useState} from 'react';
 import { useEffect } from 'react';
 import Table from "react-bootstrap/Table";
-
 // import Products from "../../components/Product";
 import Button from 'react-bootstrap/Button';
+
+
 export default function ListCart({products,handleRemoveCart,handleChange}) {
 
   const [price, setPrice] = useState(0);
@@ -21,7 +22,6 @@ export default function ListCart({products,handleRemoveCart,handleChange}) {
 })
 
   return (
-    <div>
     <Table striped bordered hover>
       <thead>
         <tr>
@@ -49,19 +49,14 @@ export default function ListCart({products,handleRemoveCart,handleChange}) {
                         <Button variant="outline-info"onClick={()=>handleChange(product, -1)}>-</Button>
                  </td>
            
-              <td><Button onClick={()=>handleRemoveCart(product)} variant="danger">Remove</Button></td>           
-             
+              <td><Button onClick={()=>handleRemoveCart(product)} variant="danger">Remove</Button></td>                                    
             </tr>
             
           );
         })}
+        <td colSpan={3}>Total Price of your Cart</td>
+              <td>{price}VNĐ</td>    
       </tbody>
     </Table>
-    <div className='total'>
-            <span>Total Price of your Cart</span>
-            <span>{price}VNĐ</span>
-             </div>
-    </div>
-   
-  );
-}
+    
+  )};

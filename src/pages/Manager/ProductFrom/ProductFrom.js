@@ -1,54 +1,83 @@
-import useInput from '../../../hooks/useInput';
+// import useInput from '../../../hooks/useInput';
+import { useFormik } from "formik";
+import { Button, Modal } from "react-bootstrap";
 
-function ProductForm({ handleAddProduct }) {
+function ProductForm({ isShow,handleClose, handleAddProduct }) {
+  const formik = useFormik({
+    initialValues: {
+      productTitle: "",
+      productPrice: "",
+      type: "",
+      amount: "",
+    },
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
+    onSubmit: (values) => {
+      const data = {
+        productTitle: values.productTitle,
+        productPrice: values.productPrice,
+        type: values.type,
+        amount: 1,
+      };
 
-        const data = {
-            productTitle: inputTitle.value,
-            productPrice: inputPrice.value,
-            type: inputType.value,
-            amount: 1,
-        }
-        handleAddProduct(data);
-    }
+      handleAddProduct(data);
+    },
+  });
 
-    const inputTitle = useInput();
-    const inputPrice = useInput();
-    const inputType = useInput();
-   
-    return ( 
-        <>
-            <form onSubmit={handleSubmit}>
-                <div className='product-form'>
-                <h3 style={{textAlign: 'center'}}>Thông tin sản phẩm</h3>
 
-                <div>
-                    <label>Tên sản phẩm: </label>
-                    <input placeholder='Nhập tên sản phẩm' type="text" value={inputTitle.value} onChange={inputTitle.onChange} />
+
+  return (
+    <>
+      <Modal size="xl" show={isShow} onHide={handleClose}>
+        <Modal.Header>
+          <Modal.Title><i class="far fa-shopping-cart"></i> Thêm Sản Phẩm</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <form onSubmit={formik.handleSubmit}>
+            <div className="product-form">
+              <div>
+                <label>Tên sản phẩm</label>
+                <input
+                  type="text"
+                  value={formik.values.productTitle}
+                  onChange={formik.handleChange}
+                  name="productTitle"
+                />
+              </div>
+              <div>
+                <label>Giá sản phẩm</label>
+                <input
+                  type="text"
+                  value={formik.values.productPrice}
+                  onChange={formik.handleChange}
+                  name="productPrice"
+                />
+              </div>
+              <div>
+                <label>Loại sản phẩm</label>
+                <div className="type-select">
+                  <select
+                    name="type"
+                    style={{ width: 75 }}
+                    value={formik.values.type}
+                    onChange={formik.handleChange}
+                  >
+                    <option value="MEN">Nam</option>
+                    <option value="WOMEN">Nữ</option>
+                  </select>
                 </div>
-
-                <div>
-                    <label>Giá sản phẩm: </label>
-                    <input type="text" placeholder='Nhập giá sản phẩm'  value={inputPrice.value} onChange={inputPrice.onChange} />
-                </div>
-
-                <div>
-                    <label>Loại sản phẩm: </label>
-                    <div className='type-select'>
-                    <select style={{width: 75}} value={inputType.value} onChange={inputType.onChange}>
-                        <option value="MEN">Nam</option>
-                        <option value="WOMEN">Nữ</option>
-                    </select>
-                    </div>
-                    
-                </div>
-                <button type="submit">Thêm sản phẩm</button>
-                </div>
-            </form>
-        </>
-     );
+              </div>
+              <button>Thêm sản phẩm</button>
+            </div>
+          </form>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    </>
+  );
 }
 
 export default ProductForm;
