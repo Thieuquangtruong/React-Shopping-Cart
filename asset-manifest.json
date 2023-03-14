@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Thieuquangtruong/React-Shopping-Cart/tree/l16-deployment/static/css/main.2309601f.css",
+    "main.js": "/Thieuquangtruong/React-Shopping-Cart/tree/l16-deployment/static/js/main.6d1f3cf3.js",
+    "index.html": "/Thieuquangtruong/React-Shopping-Cart/tree/l16-deployment/index.html",
+    "main.2309601f.css.map": "/Thieuquangtruong/React-Shopping-Cart/tree/l16-deployment/static/css/main.2309601f.css.map",
+    "main.6d1f3cf3.js.map": "/Thieuquangtruong/React-Shopping-Cart/tree/l16-deployment/static/js/main.6d1f3cf3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2309601f.css",
+    "static/js/main.6d1f3cf3.js"
+  ]
+}
