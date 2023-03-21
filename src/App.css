@@ -1,10 +1,8 @@
-.header {
-  text-align: center;
-}
-.logo{
-  font-size: 30px;
-}
 
+.header { flex:block;
+  text-align: center;
+  padding-bottom: 500px;
+}
 .product-container {
   display: flex;
   flex-wrap: wrap;

@@ -6,7 +6,7 @@ export default function BackToTopButton() {
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 100) {
+      if (window.scrollY > 250) {
         setBackToTopButton(true);
       }
       else { setBackToTopButton(false); }
@@ -19,7 +19,7 @@ export default function BackToTopButton() {
       behavior: "smooth"
     })
   }
-
+//dang thu crad
   return (
     <div className="App">
         {backToTopButton && (

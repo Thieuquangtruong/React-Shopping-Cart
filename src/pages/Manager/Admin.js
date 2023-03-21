@@ -21,7 +21,7 @@ const handleClose = () => {
 };
 
     return (
-        <div style={{padding: 50}}>
+        <div  style={{padding: 50}}>
             <h3 style={{textAlign: 'center'}}>Danh sách sản phẩm</h3>
             <Button style={{marginBottom: 10}} type="primary" onClick={showModal}>Thêm sản phẩm</Button>
             <ManagerProducts products={products}/>

@@ -1,17 +1,32 @@
+import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
+import { NavLink } from "react-router-dom";
 
+export default function Products({
+  type,
+  productImg,
+  productTitle,
+  productPrice,
+  onSubmit,
+  productId,
+}) {
+  return (
+    <div className="product">
+      <Card style={{ width: "18.8rem", background: "white" }}>
+        <NavLink to={`/cart/${productId}`}>
+          <Card.Img variant="top" src={productImg} />
+        </NavLink>
+        <Card.Body>
+          <NavLink to={`/cart/${productId}`}>
+            <Card.Title>{productTitle}</Card.Title>
+          </NavLink>
 
-
-export default function Products({type, productImg, productTitle, productPrice, onSubmit}) {
-    
-    return (
-      <div className="product">
-    
-        <img src={productImg} alt=''></img>
-        <div className="product-description">
-          <p>{productTitle}</p>
-          <span>{productPrice}VNĐ</span>
-          <button className="btn-add" onClick={onSubmit}>{type === 'PRODUCT' ? 'Add to cart' : 'Remove'} </button>
-        </div>
-      </div>
-    )
-  }
+          <Card.Text>Giá Sản Phẩm : {productPrice}VNĐ</Card.Text>
+          <Button className="btn-add" variant="primary" onClick={onSubmit}>
+            {type === "PRODUCT" ? "Add to cart" : "Remove"}
+          </Button>
+        </Card.Body>
+      </Card>
+    </div>
+  );
+}

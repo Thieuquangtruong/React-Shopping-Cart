@@ -21,7 +21,7 @@ export default function ListCart({products,handleRemoveCart,handleChange}) {
     handlePrice();
 })
 
-  return (
+  return (<div style={{paddingTop:"55px"}}>
     <Table striped bordered hover>
       <thead>
         <tr>
@@ -54,9 +54,11 @@ export default function ListCart({products,handleRemoveCart,handleChange}) {
             
           );
         })}
-        <td colSpan={3}>Total Price of your Cart</td>
-              <td>{price}VNĐ</td>    
+       
+        <th colSpan={3}>Total Price of your Cart</th>
+              <td>{price}VNĐ</td>   
+
       </tbody>
     </Table>
-    
+    </div>
   )};

@@ -7,10 +7,14 @@ import Cart from "./pages/Cart/Cart";
 import { Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Admin from "./pages/Manager/Admin";
+import ProductDetail from "./pages/ProductDetail";
+import Alert from "react-bootstrap/Alert";
 
 function App() {
   const [products, setProducts] = useState([]);
   const [listCart, setListCart] = useState([]);
+  const [showNotification, setShowNotification] = useState(false);
+
   console.log("tql listCart", listCart, "products", products);
   //Get Data
   useEffect(() => {
@@ -62,12 +66,14 @@ function App() {
   };
 
   const handleAddProduct = (data) => {
+    console.log("tql data", data);
+
     const tempProduct = {
       id: products.length,
       productImg:
         data.type === "MEN"
-          ? "./images/thunNam.jpeg"
-          : "./images/nuTayNgan.jpeg",
+          ? "./images/somiNam1.jpeg"
+          : "./images/thunNam.jpeg",
       productTitle: data.productTitle,
       productPrice: data.productPrice,
       amount: data.amount,
@@ -75,7 +81,8 @@ function App() {
     };
 
     setProducts((prev) => [...prev, tempProduct]);
-    alert("Thêm sản phẩm vào danh sách sản phẩm thành công!");
+    // alert("Thêm sản phẩm vào danh sách sản phẩm thành công!");
+    setShowNotification(true)
   };
 
   return (
@@ -86,9 +93,14 @@ function App() {
         <Route
           path="*"
           element={
-            <Home products={products} handleAddToCart={handleAddToCart} />
+            <Home
+              className="aaa"
+              products={products}
+              handleAddToCart={handleAddToCart}
+            />
           }
         />
+
         <Route
           path="/cart"
           element={
@@ -100,6 +112,7 @@ function App() {
             />
           }
         />
+        <Route path="/cart/:productId" element={<ProductDetail />} />
         <Route
           path="/admin"
           element={
@@ -109,6 +122,16 @@ function App() {
       </Routes>
       <Footer />
       <BackToTop></BackToTop>
+
+      {showNotification ? <Alert style={{
+        position: 'fixed',
+        bottom: '50px',
+        right: '50px',
+        zIndex: '2000'
+      }} key={"info"} variant={"info"} >
+        Thêm sản phẩm vào danh sách sản phẩm thành công! <i onClick={() => setShowNotification(false)} class="far fa-window-close"></i>
+      </Alert> : null}
+      
     </div>
   );
 }

@@ -56,13 +56,15 @@ function ProductForm({ isShow,handleClose, handleAddProduct }) {
                 <label>Loại sản phẩm</label>
                 <div className="type-select">
                   <select
+                    selected="MEN"
                     name="type"
                     style={{ width: 75 }}
                     value={formik.values.type}
                     onChange={formik.handleChange}
                   >
-                    <option value="MEN">Nam</option>
                     <option value="WOMEN">Nữ</option>
+                    <option value="MEN">Nam</option>
+                    
                   </select>
                 </div>
               </div>

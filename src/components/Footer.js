@@ -1,9 +1,11 @@
 import React from "react";
 
-
 const Footer = () => {
   return (
-<div classname="footer" style={{backgroundColor:"#1C1C1E",color: "#F0F8FF"}}>
+    <div
+      classname="footer"
+      style={{ backgroundColor: "#1C1C1E", color: "#F0F8FF" }}
+    >
       <div className="container">
         <div className="row">
           {/*Colum1 */}
@@ -38,10 +40,7 @@ const Footer = () => {
           <div className="cool">
             <h4> Theo dõi chúng tôi</h4>
             <ul className="list-unstyle">
-              <li className="footer-item">
-                Facebook
-                <i class="fa-brands fa-facebook"></i>
-              </li>
+              <i class="fab fa-facebook-square"></i> Facebook
             </ul>
           </div>
         </div>

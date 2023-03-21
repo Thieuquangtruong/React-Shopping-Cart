@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.f6cebc67.css",
-    "main.js": "/static/js/main.f8ffcbb1.js",
-    "index.html": "/index.html",
-    "main.f6cebc67.css.map": "/static/css/main.f6cebc67.css.map",
-    "main.f8ffcbb1.js.map": "/static/js/main.f8ffcbb1.js.map"
+    "main.css": "/Thieuquangtruong/React-Shopping-Cart/tree/l16-deployment/static/css/main.2309601f.css",
+    "main.js": "/Thieuquangtruong/React-Shopping-Cart/tree/l16-deployment/static/js/main.b32e1c35.js",
+    "index.html": "/Thieuquangtruong/React-Shopping-Cart/tree/l16-deployment/index.html",
+    "main.2309601f.css.map": "/Thieuquangtruong/React-Shopping-Cart/tree/l16-deployment/static/css/main.2309601f.css.map",
+    "main.b32e1c35.js.map": "/Thieuquangtruong/React-Shopping-Cart/tree/l16-deployment/static/js/main.b32e1c35.js.map"
   },
   "entrypoints": [
-    "static/css/main.f6cebc67.css",
-    "static/js/main.f8ffcbb1.js"
+    "static/css/main.2309601f.css",
+    "static/js/main.b32e1c35.js"
   ]
 }
