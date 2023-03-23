@@ -28,14 +28,16 @@ function App() {
 
   const handleChange = (item, d) => {
     let ind = -1;
-    products.forEach((data, index) => {
+    listCart.forEach((data, index) => {
       if (data.id === item.id) ind = index;
     });
-    const tempArr = products;
+    const tempArr = listCart;
     tempArr[ind].amount += d;
 
     if (tempArr[ind].amount === 0) tempArr[ind].amount = 1;
-    setProducts([...tempArr]);
+
+    console.log('tql prodddd',[...tempArr], item )
+    setListCart([...tempArr]);
   };
 
   const handleAddToCart = (product) => {
@@ -112,7 +114,7 @@ function App() {
             />
           }
         />
-        <Route path="/cart/:productId" element={<ProductDetail />} />
+        <Route path="/cart/:productId"  element={<ProductDetail  handleChange={handleChange}  listCart={listCart} products={products} handleAddToCart={handleAddToCart} />} />
         <Route
           path="/admin"
           element={
@@ -122,7 +124,7 @@ function App() {
       </Routes>
       <Footer />
       <BackToTop></BackToTop>
-
+          {/* them nut alert */}
       {showNotification ? <Alert style={{
         position: 'fixed',
         bottom: '50px',

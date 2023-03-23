@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div
       classname="footer"
-      style={{ backgroundColor: "#1C1C1E", color: "#F0F8FF" }}
+      style={{ padding:"25px",backgroundColor: "#1C1C1E", color: "#F0F8FF" }}
     >
       <div className="container">
         <div className="row">

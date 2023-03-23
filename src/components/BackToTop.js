@@ -29,7 +29,7 @@ export default function BackToTopButton() {
           right:"50px",
           height:"50px",
           fontSize:"20px"
-        }}>^</button>)}
+        }}><i class="fas fa-arrow-circle-up"></i></button>)}
     </div> 
   )
 }

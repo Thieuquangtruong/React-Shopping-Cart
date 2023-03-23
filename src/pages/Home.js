@@ -28,10 +28,10 @@ function Home({ products, handleAddToCart }) {
 
   return (
     <>
-      <Carousel indicators={false} style={{paddingTop:"55px"}} fade>
+      <Carousel interval={2000} indicators={false} style={{paddingTop:"55px"}} fade>
         <Carousel.Item>
           <img
-            style={{ height: "480px" }}
+            style={{ height: "472px" }}
             className="d-block w-100"
             src="https://routine.vn/media/banner/tmp/images/ESSENTIALS-LINE-MAIN-KV-1920x984_px.jpg"
             alt="First slide"
@@ -39,6 +39,7 @@ function Home({ products, handleAddToCart }) {
         </Carousel.Item>
         <Carousel.Item>
           <img
+              style={{ height: "470px" }}
             className="d-block w-100"
             src="../images/fashion.jpg"
             alt="Second slide"

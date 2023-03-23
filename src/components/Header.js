@@ -4,16 +4,18 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Badge from "react-bootstrap/Badge";
 import { Link } from "react-router-dom";
-
+import { NavLink } from "react-bootstrap";
 export default function Header({ CartNumber }) {
   return (
     <div>
       <Navbar fixed="top" bg="dark" variant="dark">
         <Container>
           <Navbar.Brand>
-            <span className="logo" style={{ fontFamily: "cursive" }}>
-              Novelty shop
-            </span>
+            <NavLink href={"/home"}>
+              <span className="logo" style={{ fontFamily: "cursive" }}>
+                Novelty shop
+              </span>
+            </NavLink>
           </Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link>
@@ -37,8 +39,6 @@ export default function Header({ CartNumber }) {
           </Nav>
         </Container>
       </Navbar>
-  
-      
     </div>
   );
 }

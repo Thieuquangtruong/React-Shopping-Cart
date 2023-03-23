@@ -3,7 +3,7 @@ import ListCart from './ListCart';
 
 function Cart({listCart,handleRemoveCart,handleChange}) {
     return ( <> 
-        <ListCart handleChange={handleChange} typeRender={'CART'} handleRemoveCart={handleRemoveCart} products={listCart} title={'Danh sách giỏ hàng'}/>
+        <ListCart handleChange={handleChange} typeRender={'CART'} handleRemoveCart={handleRemoveCart} listCart={listCart} title={'Danh sách giỏ hàng'}/>
     </> );
 }
 
