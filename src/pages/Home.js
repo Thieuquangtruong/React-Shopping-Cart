@@ -5,7 +5,7 @@ import Carousel from "react-bootstrap/Carousel";
 const TITLE_ALL = "Danh sách tất cả sản phẩm";
 const TITLE_MEN = "Danh sách tất cả sản phẩm nam";
 const TITLE_WOMEN = "Danh sách tất cả sản phẩm nữ";
-// a
+
 function Home({ products, handleAddToCart }) {
   const [typeProduct, setTypeProduct] = useState("ALL");
 
@@ -25,7 +25,7 @@ function Home({ products, handleAddToCart }) {
       : typeProduct === "MEN"
       ? TITLE_MEN
       : TITLE_WOMEN;
-
+console.log('tqt show',typeProduct)
   return (
     <>
       <Carousel interval={2000} indicators={false} style={{paddingTop:"55px"}} fade>

@@ -71,7 +71,7 @@ function App() {
     console.log("tql data", data);
 
     const tempProduct = {
-      id: products.length,
+      id: products.length+1,
       productImg:
         data.type === "MEN"
           ? "https://i.upanh.org/2023/03/24/aothuntayngannamcotron7c8848971db4a35c.jpg"

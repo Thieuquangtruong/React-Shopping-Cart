@@ -11,10 +11,10 @@ export default function Header({ CartNumber }) {
       <Navbar fixed="top" bg="dark" variant="dark">
         <Container>
           <Navbar.Brand>
-            <NavLink href={"/home"}>
-              <span className="logo" style={{ fontFamily: "cursive" }}>
+            <NavLink>
+            <Link to={"/home"}><span className="logo" style={{ fontFamily: "cursive" }}>
                 Novelty shop
-              </span>
+              </span></Link>
             </NavLink>
           </Navbar.Brand>
           <Nav className="me-auto">

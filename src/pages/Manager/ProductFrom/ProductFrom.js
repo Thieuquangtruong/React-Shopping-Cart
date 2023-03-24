@@ -6,12 +6,13 @@ function ProductForm({ isShow,handleClose, handleAddProduct }) {
   const formik = useFormik({
     initialValues: {
       productTitle: "",
-      productPrice: "",
-      type: "",
-      amount: "",
+      productPrice: 0,
+      type: "WOMEN",
+      amount: 0,
     },
 
     onSubmit: (values) => {
+      console.log('tqt values',values)
       const data = {
         productTitle: values.productTitle,
         productPrice: values.productPrice,
