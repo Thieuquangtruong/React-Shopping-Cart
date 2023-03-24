@@ -74,8 +74,8 @@ function App() {
       id: products.length,
       productImg:
         data.type === "MEN"
-          ? "./images/somiNam1.jpeg"
-          : "./images/thunNam.jpeg",
+          ? "https://i.upanh.org/2023/03/24/aothuntayngannamcotron7c8848971db4a35c.jpg"
+          : "https://i.upanh.org/2023/03/24/10s22tssw001_cradle_pink_3__177cf6e7b8be54be7.jpg",
       productTitle: data.productTitle,
       productPrice: data.productPrice,
       amount: data.amount,

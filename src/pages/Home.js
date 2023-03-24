@@ -33,7 +33,7 @@ function Home({ products, handleAddToCart }) {
           <img
             style={{ height: "472px" }}
             className="d-block w-100"
-            src="https://routine.vn/media/banner/tmp/images/ESSENTIALS-LINE-MAIN-KV-1920x984_px.jpg"
+            src="https://i.upanh.org/2023/03/24/ESSENTIALS-LINE-MAIN-KV-1920x984_px8b16340b41a46c24.jpg"
             alt="First slide"
           />
         </Carousel.Item>
@@ -41,7 +41,7 @@ function Home({ products, handleAddToCart }) {
           <img
               style={{ height: "470px" }}
             className="d-block w-100"
-            src="../images/fashion.jpg"
+            src="https://i.upanh.org/2023/03/24/fashiondb885d2fa3355a25.jpg"
             alt="Second slide"
           />
         </Carousel.Item>
@@ -49,7 +49,7 @@ function Home({ products, handleAddToCart }) {
           <img
             style={{ height: "470px" }}
             className="d-block w-100"
-            src="../images/banner.jpg"
+            src="https://i.upanh.org/2023/03/24/bannercf3ea6116c7624a3.jpg"
             alt="Third slide"
           />
         </Carousel.Item>

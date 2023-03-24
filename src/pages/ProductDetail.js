@@ -39,7 +39,7 @@ export default function ProductDetail({ handleAddToCart }) {
           >
             <Row>
               <Col sm={6}>
-                <Card.Img variant="top" src={`.${product.productImg}`} />
+                <Card.Img variant="top" src={product.productImg}/>
               </Col>
               <Col>
                 <Card.Body>
