@@ -20,7 +20,7 @@ console.log('tql listCart',listCart)
     handlePrice();
 })
 
-  return (<div style={{paddingTop:"55px"}}>
+  return (<div style={{paddingTop:"100px"}}>
     <Table striped bordered hover>
       <thead>
         <tr>

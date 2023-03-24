@@ -1,3 +1,4 @@
+import { Col, Row } from 'react-bootstrap';
 import Product from './Product'
 
 function ListProduct({ products, title, handleSubmit, typeRender,amount }) {
@@ -5,24 +6,26 @@ function ListProduct({ products, title, handleSubmit, typeRender,amount }) {
         <>
       
             <h3 style={{textAlign: 'center'}}>{title}</h3>
-            <div className='product-container'>
+            <Row>
                 {
                 products.map((product) => {
                     return (
-                    <Product
-                        key={product.id}
-                        productId={product.id}
-                        productImg={product.productImg}
-                        productTitle={product.productTitle}
-                        productPrice={product.productPrice}
-                        type={typeRender}
-                        amount={product.amount}
-                        onSubmit={() => handleSubmit(product)}
-                    />
+                    <Col lg={3} md={4} sm={6}>
+                        <Product
+                            key={product.id}
+                            productId={product.id}
+                            productImg={product.productImg}
+                            productTitle={product.productTitle}
+                            productPrice={product.productPrice}
+                            type={typeRender}
+                            amount={product.amount}
+                            onSubmit={() => handleSubmit(product)}
+                        />
+                    </Col>
                     )
                 })
                 }
-            </div>
+            </Row>
         </>
      );
 }

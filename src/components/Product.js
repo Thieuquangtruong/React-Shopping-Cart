@@ -11,7 +11,6 @@ export default function Products({
   productId,
 }) {
   return (
-    <div className="product">
       <Card style={{ width: "16.5rem", background: "white" }}>
         <NavLink to={`/cart/${productId}`}>
           <Card.Img variant="top" src={productImg} />
@@ -27,6 +26,5 @@ export default function Products({
           </Button>
         </Card.Body>
       </Card>
-    </div>
   );
 }

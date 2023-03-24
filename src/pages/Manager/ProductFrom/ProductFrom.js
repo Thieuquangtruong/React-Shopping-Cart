@@ -69,7 +69,7 @@ function ProductForm({ isShow,handleClose, handleAddProduct }) {
                   </select>
                 </div>
               </div>
-              <button>Thêm sản phẩm</button>
+              <Button variant="success">Thêm Sản Phẩm</Button>
             </div>
           </form>
         </Modal.Body>
