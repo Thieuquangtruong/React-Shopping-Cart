@@ -20,7 +20,7 @@ export default function ManagerProducts({products,handleRemoveCart}) {
               <td>{index + 1}</td>
               <td><img style={{height:50}} src={product.productImg} alt=""></img></td>
               <td>{product.productTitle}</td>
-              <td>{product.productPrice}VNĐ</td>
+              <td>{product.productPrice} VNĐ</td>
               <td>{product.type === 'MEN' ? 'Nam' : 'Nữ'}</td>
              
             </tr>

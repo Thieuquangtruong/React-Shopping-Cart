@@ -20,7 +20,7 @@ export default function Products({
             <Card.Title>{productTitle}</Card.Title>
           </NavLink>
 
-          <Card.Text>Giá Sản Phẩm : {productPrice}VNĐ</Card.Text>
+          <Card.Text>Giá Sản Phẩm : {productPrice} VNĐ</Card.Text>
           <Button className="btn-add" variant="primary" onClick={onSubmit}>
             {type === "PRODUCT" ? "Add to cart" : "Remove"}
           </Button>

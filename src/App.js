@@ -20,9 +20,12 @@ function App() {
   useEffect(() => {
     fetch("https://63f43bca864fb1d600246cf7.mockapi.io/api/v1/123")
       .then((res) => res.json())
-      .then((products) => {
+      .then((data) => {
         console.log("result: ", products);
-        setProducts(products);
+        setProducts(data.map(p => {
+          p.price = p.productPrice
+          return p;
+        }));
       });
   }, []);
 
@@ -33,6 +36,7 @@ function App() {
     });
     const tempArr = listCart;
     tempArr[ind].amount += d;
+    tempArr[ind].price = tempArr[ind].amount*tempArr[ind].productPrice;
 
     if (tempArr[ind].amount === 0) tempArr[ind].amount = 1;
 
@@ -51,6 +55,7 @@ function App() {
       if (newItem.id === product.id) {
         isExisted = true;
         newItem.amount++;
+        newItem.price = newItem.amount*product.productPrice
       }
       return newItem;
     });
@@ -79,6 +84,7 @@ function App() {
       productTitle: data.productTitle,
       productPrice: data.productPrice,
       amount: data.amount,
+      price:  data.productPrice,
       type: data.type,
     };
 

@@ -27,6 +27,7 @@ console.log('tql listCart',listCart)
           <th>STT</th>
           <th>Ảnh</th>
           <th>Tên Sản Phẩm</th>
+          <th>Đơn Giá</th>
           <th>Giá</th>
           <th>Loại</th>
           <th>Số lượng</th>
@@ -39,7 +40,8 @@ console.log('tql listCart',listCart)
               <td>{index + 1}</td>
               <td><img style={{height:50}} src={product.productImg} alt=""></img></td>
               <td>{product.productTitle}</td>
-              <td>{product.productPrice}VNĐ</td>
+              <td>{product.productPrice} VNĐ</td>
+              <td>{product.price} VNĐ</td>
               <td>{product.type === 'MEN' ? 'Nam' : 'Nữ'}</td>
        
                 <td> 
@@ -55,7 +57,7 @@ console.log('tql listCart',listCart)
         })}
        
         <th colSpan={3}>Total Price of your Cart</th>
-              <td>{price}VNĐ</td>   
+              <td>{price} VNĐ</td>   
 
       </tbody>
     </Table>

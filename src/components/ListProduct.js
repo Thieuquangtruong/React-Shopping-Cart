@@ -19,6 +19,7 @@ function ListProduct({ products, title, handleSubmit, typeRender,amount }) {
                             productPrice={product.productPrice}
                             type={typeRender}
                             amount={product.amount}
+                            price={product.price}
                             onSubmit={() => handleSubmit(product)}
                         />
                     </Col>
