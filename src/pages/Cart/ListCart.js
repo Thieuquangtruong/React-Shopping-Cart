@@ -56,7 +56,7 @@ console.log('tql listCart',listCart)
           );
         })}
        
-        <th colSpan={3}>Total Price of your Cart</th>
+        <th colSpan={4}>Total Price of your Cart</th>
               <td>{price} VNĐ</td>   
 
       </tbody>
