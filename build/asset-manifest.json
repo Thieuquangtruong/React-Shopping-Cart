@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Thieuquangtruong/React-Shopping-Cart/tree/l16-deployment/static/css/main.05c00f7a.css",
-    "main.js": "/Thieuquangtruong/React-Shopping-Cart/tree/l16-deployment/static/js/main.5c6b7578.js",
-    "index.html": "/Thieuquangtruong/React-Shopping-Cart/tree/l16-deployment/index.html",
-    "main.05c00f7a.css.map": "/Thieuquangtruong/React-Shopping-Cart/tree/l16-deployment/static/css/main.05c00f7a.css.map",
-    "main.5c6b7578.js.map": "/Thieuquangtruong/React-Shopping-Cart/tree/l16-deployment/static/js/main.5c6b7578.js.map"
+    "main.css": "/React-Shopping-Cart/static/css/main.05c00f7a.css",
+    "main.js": "/React-Shopping-Cart/static/js/main.441038cd.js",
+    "index.html": "/React-Shopping-Cart/index.html",
+    "main.05c00f7a.css.map": "/React-Shopping-Cart/static/css/main.05c00f7a.css.map",
+    "main.441038cd.js.map": "/React-Shopping-Cart/static/js/main.441038cd.js.map"
   },
   "entrypoints": [
     "static/css/main.05c00f7a.css",
-    "static/js/main.5c6b7578.js"
+    "static/js/main.441038cd.js"
   ]
 }
